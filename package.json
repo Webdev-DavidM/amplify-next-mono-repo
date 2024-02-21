@@ -2,7 +2,9 @@
   "name": "@ampl-test/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build-app1": "npx nx run app1:build"
+  },
   "private": true,
   "dependencies": {
     "@nx/next": "17.0.2",
