@@ -1,12 +1,13 @@
-async function getMovies() {
-  let res = await fetch(`https://dummyjson.com/products`, {
+async function getMovies(url) {
+  let res = await fetch(`${url}`, {
     cache: 'no-cache',
   });
   return res.json();
 }
 
 async function Trending() {
-  let { products } = await getMovies();
+  const url = process.env.NEXT_PUBLIC_URL;
+  let { products } = await getMovies(url);
   return (
     <div>
       <h3>Movies</h3>
