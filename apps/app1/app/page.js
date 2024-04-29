@@ -6,7 +6,7 @@ async function getMovies(url) {
 }
 
 async function Trending() {
-  const url = process.env.NEXT_PUBLIC_URL;
+  const url = process.env.MY_URL;
   let { products } = await getMovies(url);
   return (
     <div>
