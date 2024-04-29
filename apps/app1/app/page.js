@@ -1,7 +1,10 @@
 async function getMovies() {
-  let res = await fetch(`${process.env.NEXT_PRACTICE_URL_SERVER_SIDE}`, {
-    cache: 'no-cache',
-  });
+  let res = await fetch(
+    `${process.env.NEXT_PUBLIC_NEXT_PRACTICE_URL_SERVER_SIDE}`,
+    {
+      cache: 'no-cache',
+    }
+  );
   return res.json();
 }
 
