@@ -1,13 +1,13 @@
-async function getMovies(url) {
-  let res = await fetch(`${url}`, {
+async function getMovies() {
+  console.log(process.env.MY_URL);
+  let res = await fetch(`${process.env.MY_URL}`, {
     cache: 'no-cache',
   });
   return res.json();
 }
 
 async function Trending() {
-  const url = process.env.MY_URL;
-  let { products } = await getMovies(url);
+  let { products } = await getMovies();
   return (
     <div>
       <h3>Movies</h3>
