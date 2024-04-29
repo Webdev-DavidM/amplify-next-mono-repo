@@ -1,9 +1,6 @@
-import Link from "next/link";
-
-
 async function getMovies() {
   let res = await fetch(`https://dummyjson.com/products`, {
-    cache: "no-cache",
+    cache: 'no-cache',
   });
   return res.json();
 }
@@ -15,9 +12,7 @@ async function Trending() {
       <h3>Movies</h3>
       {products &&
         products.map((product) => {
-          return <div key={product.id} product={product}>
-            {product.id}
-            </div>
+          return <div key={product.id}>{product.id}</div>;
         })}
     </div>
   );
