@@ -7,7 +7,8 @@ applications:
             - yarn install
         build:
           commands:
-            - env | grep -e MY_URL >> .env.production
+            - env | grep -e MY_URL >> apps/app/ .env.production
+            - env | grep -e MY_URL >> .env.development
             - npx nx run app1:build
       artifacts:
         baseDirectory: dist/apps/app1/.next
