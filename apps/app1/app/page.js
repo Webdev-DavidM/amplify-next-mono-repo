@@ -6,7 +6,7 @@ async function getMovies() {
 }
 
 export default async function Index() {
-  const { products }: = await getMovies();
+  const { products } = await getMovies();
   return (
     <div>
       <h3>Movies</h3>
