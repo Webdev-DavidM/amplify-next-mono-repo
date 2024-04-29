@@ -6,12 +6,12 @@ async function getMovies() {
 }
 
 export default async function Index() {
-  let { products } = await getMovies();
+  const { products }: = await getMovies();
   return (
     <div>
       <h3>Movies</h3>
       {products &&
-        products.map((product: any) => {
+        products.map((product) => {
           return (
             <div key={product.id} product={product}>
               {product.description}
